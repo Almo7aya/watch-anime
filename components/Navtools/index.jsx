@@ -27,7 +27,7 @@ export default function Navtools({ isLight = false }) {
         <li className={styles.navtools_list_item}>
           <button onClick={() => setIsLightTheme(!isLightTheme)} type='button'>
             {
-              isLightTheme ? <><LightTheme /> 🌚 </> : <span>🌝</span>
+              isLightTheme ? <><LightTheme isFull={false} /> 🌚 </> : <span>🌝</span>
             }
           </button>
         </li>

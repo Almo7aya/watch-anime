@@ -1,20 +1,55 @@
-.lighttheme {
-  width: 100vw;
+.lighttheme_mini {
+  width: 100vh;
   height: 100vh;
-  position: fixed;
 
+  position: fixed;
+  left: 0;
+  bottom: 0;
   background: #ffffff;
   mix-blend-mode: difference;
   pointer-events: none;
 
-  transform: scale(0);
-  border-radius: 50%;
+  top: 45%;
+  left: -29%;
 
-  animation: overlay-light 1400ms forwards;
+  transform: scale(0);
+  border-radius: 50% ;
+
+  animation: overlay-light-in 1000ms forwards;
+
+  z-index: 1;
 }
 
-@keyframes overlay-light {
+.lighttheme_full {
+  width: 100vh;
+  height: 100vh;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #ffffff;
+  mix-blend-mode: difference;
+  pointer-events: none;
+
+  top: 45%;
+  left: -29%;
+
+  transform: scale(5);
+  border-radius: 50% ;
+
+  animation: overlay-light-out 1000ms forwards;
+
+  z-index: 1;
+}
+
+@keyframes overlay-light-in {
   to {
-    transform: scale(2);
+    transform: scale(5);
+  }
+}
+
+@keyframes overlay-light-out {
+  to {
+    transform: scale(0);
   }
 }
