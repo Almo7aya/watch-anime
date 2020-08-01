@@ -1,8 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 
-import styles from '../styles/Home.module.css'
-
 import { useTranslation } from '../i18n'
 
 export default function Home () {

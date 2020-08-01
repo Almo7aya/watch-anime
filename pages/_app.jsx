@@ -3,7 +3,7 @@ import propTypes from 'prop-types'
 import App from 'next/app'
 import { appWithTranslation } from '../i18n'
 
-import '../styles/globals.css'
+import '../styles/main.scss'
 
 function MyApp ({ Component, pageProps }) {
   return <Component {...pageProps} />

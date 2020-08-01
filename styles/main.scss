@@ -1,0 +1,43 @@
+@import './base/vars';
+@import './base/grid';
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    box-sizing: inherit;
+    outline: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--initial-font-size); // == 10px
+}
+
+body {
+  font-family: var(--font-family);
+
+  font-size: 1.6rem; // To make it to 16px
+
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+a,
+a:active,
+a:hover,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+::-webkit-scrollbar {
+    width: .7rem;
+    height: .7rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+}

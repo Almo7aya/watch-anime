@@ -1,0 +1,7 @@
+.main-grid-container {
+  display: grid;
+  grid-template-columns: var(--navbar-width) 1fr;
+  height: 100vh;
+
+  grid-template-areas: "header main";
+}
