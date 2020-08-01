@@ -3,4 +3,10 @@
 
   background-color: var(--background-color);
   color: var(--text-color);
+
+  overflow-y: auto;
+
+  .heading {
+    font-size: 3rem;
+  }
 }

@@ -1,0 +1,19 @@
+.topbar {
+  position: fixed;
+
+  display: flex;
+  align-content: center;
+
+  height: var(--topbar-height-initial);
+  width: 100%;
+
+  padding: var(--topbar-padding);
+
+  background-color: var(--primary-color);
+
+  backdrop-filter: blur(999rem);
+
+  h2 {
+    line-height: var(--topbar-height-initial);
+  }
+}
