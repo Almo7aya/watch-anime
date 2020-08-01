@@ -1,3 +1,14 @@
 {
-    "name": "Watch Anime"
+  "common-messages": "//",
+  "name": "Watch Anime",
+
+  "nav-messages": "//",
+  "home": "Home",
+  "search": "Search",
+  "about": "About",
+  "list": "Anime List",
+
+  "pages-messages": "//",
+  "latest-animes": "Latest added animes",
+  "animes-list": "Animes List"
 }

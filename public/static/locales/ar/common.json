@@ -1,3 +1,14 @@
 {
-    "name": "شاهد انمي"
+  "common-messages": "//",
+  "name": "شاهد انمي",
+
+  "nav-messages": "//",
+  "home": "الرئيسية",
+  "search": "بحث",
+  "about": "معلومات",
+  "list": "لائحة الانمي",
+
+  "pages-messages": "//",
+  "latest-animes": "اخر الانميات المضافة",
+  "animes-list": "لائحة الانمي"
 }
