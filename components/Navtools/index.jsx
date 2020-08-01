@@ -13,7 +13,12 @@ export default function Navtools({ isLight = false }) {
     <section className={styles.navtools}>
       <ul className={styles.navtools_list}>
         <li className={styles.navtools_list_item}>
-          <p onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'ar' : 'en')}>
+          <p onClick={() => {
+            i18n.changeLanguage(i18n.language === 'en' ? 'ar' : 'en')
+            i18n.on('languageChanged', () => {
+              document.querySelector('html').lang = i18n.language
+            })
+          }}>
             {
               i18n.language === 'en' ? 'عربي' : 'English'
             }
