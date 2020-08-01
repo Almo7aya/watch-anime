@@ -2,10 +2,12 @@ import React from 'react'
 import MaterialIcon from '@material/react-material-icon'
 
 import styles from './Navbar.module.scss'
-
+import { useTranslation } from '../../i18n'
 import ActiveLink from '../ActiveLink'
 
 export default function Navbar () {
+  const { t } = useTranslation()
+
   return (<>
     <nav className={styles.nav}>
       <ul className={styles.nav_list}>
@@ -13,7 +15,7 @@ export default function Navbar () {
           <ActiveLink activeClassName="active" href="/" >
             <a>
               <MaterialIcon icon="home" />
-              <p>home</p>
+              <p>{t('home')}</p>
             </a>
           </ActiveLink>
         </li>
@@ -21,7 +23,15 @@ export default function Navbar () {
           <ActiveLink activeClassName="active" href="/search" >
             <a>
               <MaterialIcon icon="search" />
-              <p>search</p>
+              <p>{t('search')}</p>
+            </a>
+          </ActiveLink>
+        </li>
+        <li className={styles.nav_list_item}>
+          <ActiveLink activeClassName="active" href="/list" >
+            <a>
+              <MaterialIcon icon="list" />
+              <p>{t('list')}</p>
             </a>
           </ActiveLink>
         </li>
@@ -29,7 +39,7 @@ export default function Navbar () {
           <ActiveLink activeClassName="active" href="/about">
             <a>
               <MaterialIcon icon="info_outline" />
-              <p>about</p>
+              <p>{t('about')}</p>
             </a>
           </ActiveLink>
         </li>
