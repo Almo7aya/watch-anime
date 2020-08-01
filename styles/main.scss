@@ -15,6 +15,10 @@
 html {
   box-sizing: border-box;
   font-size: var(--initial-font-size); // == 10px
+
+  &[lang=ar] {
+    direction: rtl;
+  }
 }
 
 body {
