@@ -1,7 +1,20 @@
 .main-grid-container {
   display: grid;
   grid-template-columns: var(--navbar-width) 1fr;
+  grid-template-rows: var(--navbar-width) 1fr;
   height: 100vh;
 
-  grid-template-areas: "header main";
+  grid-template-areas:
+    "header main"
+    "navbar main";
+
+  @media screen and (max-width: 600px){
+    grid-template-columns: 1fr;
+    // TODO: fix mobile view
+    grid-template-rows: var(--navbar-width) 1fr var(--navbar-width);
+    grid-template-areas:
+    "header"
+    "main"
+    "navbar";
+  }
 }

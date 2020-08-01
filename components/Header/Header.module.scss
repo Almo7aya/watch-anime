@@ -1,0 +1,16 @@
+.header {
+  grid-area: header;
+
+  background-color: var(--primary-color);
+  color: var(--text-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand {
+  text-align: center;
+  font-size: 5em;
+  font-weight: 200;
+}
