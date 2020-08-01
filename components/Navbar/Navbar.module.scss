@@ -26,6 +26,10 @@
       a {
         width: inherit;
 
+        border-left: .4rem solid transparent;
+        border-right: .4rem solid transparent;
+        transition: 400ms all;
+
         &.test {
           display: none;
         }

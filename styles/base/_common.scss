@@ -1,4 +1,5 @@
 // For active link element
 nav a.active {
   color: var(--accent-color);
+  border-left-color: var(--accent-color);
 }

@@ -14,6 +14,7 @@
     text-align: center;
     font-size: 5em;
     font-weight: 200;
+    user-select: none;
 
     span {
       position: absolute;
@@ -21,8 +22,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: var(--brand-color-2);
-
-      pointer-events: none;
 
       &:first-child {
         opacity: .8;
