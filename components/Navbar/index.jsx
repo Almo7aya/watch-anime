@@ -18,7 +18,7 @@ export default function Navbar () {
           </ActiveLink>
         </li>
         <li className={styles.nav_list_item}>
-          <ActiveLink activeClassName="active" href="/" >
+          <ActiveLink activeClassName="active" href="/search" >
             <a>
               <MaterialIcon icon="search" />
               <p>search</p>
@@ -26,7 +26,7 @@ export default function Navbar () {
           </ActiveLink>
         </li>
         <li className={styles.nav_list_item}>
-          <ActiveLink activeClassName="active" href="/">
+          <ActiveLink activeClassName="active" href="/about">
             <a>
               <MaterialIcon icon="info_outline" />
               <p>about</p>
