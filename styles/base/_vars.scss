@@ -7,15 +7,15 @@
 
   // Colors
 
-  // #222831
-  // #30475e
-  // #f2a365
-  // #ececec
+  --primary-color: rgb(15, 14, 15);
+  --background-color: rgb(16, 17, 17);
 
-  --primary-color: #30475e;
-  --accent-color: #f2a365;
-  --background-color: #222831;
-  --text-color: #ececec;
+  --accent-color: rgb(130, 215, 213);
+  --text-color: #bcbcbc;
+
+  --brand-color-1: rgb(216, 57, 62);
+  --brand-color-2: rgb(145, 144, 144);
+  --brand-color-3: rgb(99, 211, 198);
 
   // Sizes
   --navbar-width: 12rem;

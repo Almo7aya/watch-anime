@@ -21,9 +21,14 @@
       display: flex;
       margin: 2rem 0;
       width: 100%;
+      color: var(--text-color);
 
       a {
         width: inherit;
+
+        &.active {
+          color: green;
+        }
 
         i {
           font-size: 3em;
