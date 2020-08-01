@@ -1,0 +1,20 @@
+.lighttheme {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+
+  background: #ffffff;
+  mix-blend-mode: difference;
+  pointer-events: none;
+
+  transform: scale(0);
+  border-radius: 50%;
+
+  animation: overlay-light 1400ms forwards;
+}
+
+@keyframes overlay-light {
+  to {
+    transform: scale(2);
+  }
+}

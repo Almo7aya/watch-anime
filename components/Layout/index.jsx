@@ -6,11 +6,14 @@ import Navbar from '../Navbar'
 
 export default function Layout ({ children }) {
   return (
-    <div className="main-grid-container">
-      <Header />
-      <Navbar />
-      {children}
-    </div>
+    <>
+      <div className="main-grid-container">
+        <Header />
+        <Navbar />
+        {children}
+      </div>
+      <div id='light-theme-holder'></div>
+    </>
   )
 }
 

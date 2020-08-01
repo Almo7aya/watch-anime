@@ -4,6 +4,7 @@ import MaterialIcon from '@material/react-material-icon'
 import styles from './Navbar.module.scss'
 import { useTranslation } from '../../i18n'
 import ActiveLink from '../ActiveLink'
+import Navtools from '../Navtools'
 
 export default function Navbar () {
   const { t } = useTranslation()
@@ -44,6 +45,7 @@ export default function Navbar () {
           </ActiveLink>
         </li>
       </ul>
+      <Navtools />
     </nav>
   </>)
 }

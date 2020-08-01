@@ -1,0 +1,42 @@
+.navtools {
+  color: var(--text-color);
+
+  display: flex;
+  flex-direction: column;
+
+  &_list {
+    list-style: none;
+    padding: 0;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_item {
+      text-align: center;
+      margin: 2rem 0;
+      width: 100%;
+      color: var(--text-color);
+
+      p {
+        text-align: center;
+        font-size: 2.2rem;
+        text-decoration: underline;
+
+      }
+
+      button {
+        outline: none;
+        background-color: transparent;
+
+        padding: 1.3rem;
+        border: .2rem solid var(--text-color);
+        border-radius: 1rem;
+        font-size: 1.2em;
+
+        isolation: isolate;
+      }
+    }
+  }
+}
