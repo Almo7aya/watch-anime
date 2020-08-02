@@ -20,15 +20,39 @@
   // Sizes
   --navbar-width: 12rem;
   --navbar-mobile-height: 8rem;
+  --header-mobile-height: 8rem;
+
 
   --topbar-padding: 0 4rem;
   --topbar-height-initial: 8rem;
   --topbar-height-scrolled: 3rem;
+  @media (max-width: $main-layout-breakpoint) {
+    --topbar-padding: 0 4rem;
+    --topbar-height-initial: 4rem;
+    --topbar-height-scrolled: 4rem;
+  }
 
   --anime-list-height: 32rem;
   --anime-list-width: 20rem;
-
   --anime-list-gap: 2rem;
+
+  @media (max-width: $main-layout-breakpoint) {
+    --anime-list-height: 23rem;
+    --anime-list-width: 13rem;
+    --anime-list-gap: 1rem;
+  }
+
+  @media (max-width: 560px) {
+    --anime-list-height: 22rem;
+    --anime-list-width: 14rem;
+    --anime-list-gap: 1rem;
+  }
+
+  @media (max-width: 445px) {
+    --anime-list-height: 20rem;
+    --anime-list-width: 12rem;
+    --anime-list-gap: 1rem;
+  }
 
   // Effects
 }

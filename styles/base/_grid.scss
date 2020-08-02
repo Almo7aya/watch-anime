@@ -11,7 +11,7 @@
   @media screen and (max-width: $main-layout-breakpoint) {
     grid-template-columns: 1fr;
 
-    grid-template-rows: var(--navbar-width) 1fr var(--navbar-mobile-height);
+    grid-template-rows: var(--header-mobile-height) 1fr var(--navbar-mobile-height);
     grid-template-areas:
     "header"
     "main"
