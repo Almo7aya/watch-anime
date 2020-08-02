@@ -11,5 +11,11 @@
 
   "pages-messages": "//",
   "latest-animes": "اخر الانميات المضافة",
-  "animes-list": "لائحة الانمي"
+  "animes-list": "لائحة الانمي",
+
+  "seasons-messages": "//",
+  "Fall": "خريف",
+  "Summer": "صيف",
+  "Winter": "شتاء",
+  "Spring": "ربيع"
 }

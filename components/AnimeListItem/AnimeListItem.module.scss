@@ -1,4 +1,6 @@
 .animelistitem {
+  direction: ltr;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,8 +28,6 @@
     }
 
     &_rating {
-      direction: ltr;
-
       position: absolute;
       top: 0;
       left: 0;
