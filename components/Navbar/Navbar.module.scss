@@ -1,3 +1,5 @@
+@import '../../styles//base/breakpoints';
+
 .nav {
   grid-area: navbar;
 
@@ -6,6 +8,7 @@
 
   display: flex;
   flex-direction: column;
+
 
   &_list {
     list-style: none;
@@ -16,12 +19,20 @@
     flex-direction: column;
     align-items: center;
 
+    @media (max-width: $main-layout-breakpoint) {
+      flex-direction: row;
+    }
+
     &_item {
       text-align: center;
       display: flex;
       margin: 2rem 0;
       width: 100%;
       color: var(--text-color);
+
+      @media (max-width: $main-layout-breakpoint) {
+        margin: 0;
+      }
 
       a {
         width: inherit;
@@ -30,12 +41,18 @@
         border-right: .4rem solid transparent;
         transition: 400ms all;
 
-        &.test {
-          display: none;
+        @media (max-width: $main-layout-breakpoint) {
+          border: none;
+          border-top: .4rem solid transparent;
+          border-bottom: .4rem solid transparent;
         }
 
         i {
           font-size: 3em;
+
+          @media (max-width: $main-layout-breakpoint) {
+            font-size: 2.5em;
+          }
         }
 
         p {

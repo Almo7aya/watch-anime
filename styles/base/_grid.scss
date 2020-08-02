@@ -8,10 +8,10 @@
     "header main"
     "navbar main";
 
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: $main-layout-breakpoint) {
     grid-template-columns: 1fr;
-    // TODO: fix mobile view
-    grid-template-rows: var(--navbar-width) 1fr var(--navbar-width);
+
+    grid-template-rows: var(--navbar-width) 1fr var(--navbar-mobile-height);
     grid-template-areas:
     "header"
     "main"

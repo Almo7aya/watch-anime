@@ -1,8 +1,14 @@
+@import '../../styles//base/breakpoints';
+
 .navtools {
   color: var(--text-color);
 
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $main-layout-breakpoint){
+    display: none;
+  }
 
   &_list {
     list-style: none;
