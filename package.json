@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev:debug": "NODE_OPTIONS='--inspect' next dev",
+    "dev:debug": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start"
   },
@@ -19,6 +19,7 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "eslint": "^7.6.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.0",
