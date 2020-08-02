@@ -12,32 +12,40 @@
 
   position: relative;
 
-  .brand {
-    text-align: center;
-    font-size: 5em;
-    font-weight: 200;
-    user-select: none;
+  a {
+    .brand {
+      flex: 1;
+      text-align: center;
+      font-size: 5em;
+      font-weight: 200;
+      user-select: none;
 
-    @media (max-width: $main-layout-breakpoint-xxm) {
-      font-size: 4rem;
-    }
-
-    span {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: var(--brand-color-2);
-
-      &:first-child {
-        left: 55%;
-        color: var(--brand-color-1);
-        animation: brand-animation-right 6s infinite alternate linear;
+      @media (max-width: $main-layout-breakpoint-xxm) {
+        font-size: 4rem;
       }
-      &:last-child {
-        left: 45%;
-        color: var(--brand-color-3);
-        animation: brand-animation-left 6s infinite alternate linear;
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--brand-color-2);
+
+        @media (max-width: $main-layout-breakpoint-xxm) {
+          padding-top: 1.3rem;
+        }
+
+        &:first-child {
+          left: 55%;
+          color: var(--brand-color-1);
+          animation: brand-animation-right 6s infinite alternate linear;
+        }
+
+        &:last-child {
+          left: 45%;
+          color: var(--brand-color-3);
+          animation: brand-animation-left 6s infinite alternate linear;
+        }
       }
     }
   }
