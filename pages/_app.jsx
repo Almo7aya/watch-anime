@@ -1,11 +1,19 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import App from 'next/app'
-import { appWithTranslation } from '../i18n'
-
-import Layout from '../components/Layout'
 
 import '../styles/main.scss'
+import { appWithTranslation } from '../i18n'
+import Layout from '../components/Layout'
+
+import { isServer } from '../utils/helpers'
+
+if (!isServer) {
+  document.querySelector(':root').style
+    .setProperty('--vh', window.innerHeight / 100 + 'px')
+  window.addEventListener('resize', () => {
+  })
+}
 
 function MyApp ({ Component, pageProps }) {
   return <Layout><Component {...pageProps} /></Layout>

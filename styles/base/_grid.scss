@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: var(--navbar-width) 1fr;
   grid-template-rows: var(--navbar-width) 1fr;
-  height: 100vh;
+  height: calc(100 * var(--vh));
 
   grid-template-areas:
     "header main"
