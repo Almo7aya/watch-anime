@@ -49,6 +49,28 @@
       }
     }
   }
+
+  &_languagetoggler {
+    display: none;
+
+    position: absolute;
+    left: 7%;
+
+    @media (max-width: $main-layout-breakpoint-xxm) {
+      display: block;
+    }
+  }
+
+  &_themetoggler {
+    display: none;
+
+    position: absolute;
+    right: 7%;
+
+    @media (max-width: $main-layout-breakpoint-xxm) {
+      display: block;
+    }
+  }
 }
 
 

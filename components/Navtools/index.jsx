@@ -1,35 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import propTypes from 'prop-types'
 
 import styles from './Navtools.module.scss'
-import LightTheme from '../LightTheme'
-import { useTranslation } from '../../i18n'
+import LanguageToggler from '../LanguageToggler'
+import ThemeToggler from '../ThemeToggler'
 
 export default function Navtools({ isLight = false }) {
-  const [isLightTheme, setIsLightTheme] = useState(isLight)
-  const { i18n } = useTranslation()
-
   return (
     <section className={styles.navtools}>
       <ul className={styles.navtools_list}>
         <li className={styles.navtools_list_item}>
-          <p onClick={() => {
-            i18n.changeLanguage(i18n.language === 'en' ? 'ar' : 'en')
-            i18n.on('languageChanged', () => {
-              document.querySelector('html').lang = i18n.language
-            })
-          }}>
-            {
-              i18n.language === 'en' ? 'عربي' : 'English'
-            }
-          </p>
+          <LanguageToggler />
         </li>
         <li className={styles.navtools_list_item}>
-          <button onClick={() => setIsLightTheme(!isLightTheme)} type='button'>
-            {
-              isLightTheme ? <><LightTheme isFull={false} /> 🌚 </> : <span>🌝</span>
-            }
-          </button>
+          <ThemeToggler isLight={isLight} />
         </li>
       </ul>
     </section>

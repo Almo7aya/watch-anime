@@ -3,6 +3,8 @@ import Link from 'next/link'
 
 import styles from './Header.module.scss'
 import { useTranslation } from '../../i18n'
+import LanguageToggler from '../LanguageToggler'
+import ThemeToggler from '../ThemeToggler'
 
 export default function Header() {
   const { t } = useTranslation()
@@ -17,6 +19,12 @@ export default function Header() {
           </h1>
         </a>
       </Link>
+      <div className={styles.header_languagetoggler}>
+        <LanguageToggler />
+      </div>
+      <div className={styles.header_themetoggler}>
+        <ThemeToggler isLight={false} />
+      </div>
     </header>
   </>)
 }
