@@ -14,7 +14,7 @@ export default function SearchPage({ params }) {
 
   return (
     <Layout>
-      <Topbar heading={t('animes-list')} />
+      <Topbar heading={t('search')} />
       <SearchBox initialSearchValue={searchQuery} onValueChange={(e) => {
         console.log(e)
       }} />

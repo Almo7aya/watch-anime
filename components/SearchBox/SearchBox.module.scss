@@ -1,3 +1,16 @@
 .searchbox {
 
+  border-radius: 1rem;
+  border: .2rem solid;
+  border-left-color: var(--brand-color-1);
+  border-top-color: var(--brand-color-1);
+  border-right-color: var(--brand-color-3);
+  border-bottom-color: var(--brand-color-3);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+
+  font-size: 1.7rem;
+
+  padding: 1rem;
+  margin: 2rem;
 }
