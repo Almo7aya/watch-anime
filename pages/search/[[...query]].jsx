@@ -9,17 +9,13 @@ import SearchBox from '../../components/SearchBox'
 
 export default function QueryPage({ query }) {
   const { t } = useTranslation()
-  const { query: searchQuery } = query
-
-  console.log(searchQuery + '??')
-
-  console.log('RENDERING ~ QueryPage')
+  const { [query]: searchQuery } = query
 
   return (
     <Layout>
       <Topbar heading={t('animes-list')} />
       <SearchBox initialSearchValue={searchQuery} onValueChange={(e) => {
-        // console.log(e)
+        console.log(e)
       }} />
       <AnimeList />
     </Layout>
