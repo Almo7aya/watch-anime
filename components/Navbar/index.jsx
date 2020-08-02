@@ -21,7 +21,7 @@ export default function Navbar () {
           </ActiveLink>
         </li>
         <li className={styles.nav_list_item}>
-          <ActiveLink activeClassName="active" href="/search" >
+          <ActiveLink activeClassName="active" href="/search/[[...query]]" as="/search" >
             <a>
               <MaterialIcon icon="search" />
               <p>{t('search')}</p>
