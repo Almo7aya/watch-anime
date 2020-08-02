@@ -11,7 +11,6 @@ export default function QueryPage() {
   return (
     <Layout>
       <Topbar heading={t('animes-list')} />
-      <input />
       <AnimeList />
     </Layout>
   )

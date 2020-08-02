@@ -4,6 +4,7 @@ import { useTranslation } from '../../i18n'
 import Topbar from '../../components/Topbar'
 import AnimeList from '../../components/AnimeList'
 import Layout from '../../components/Layout'
+import SearchBox from '../../components/SearchBox'
 
 export default function SearchPage() {
   const { t } = useTranslation()
@@ -11,7 +12,9 @@ export default function SearchPage() {
   return (
     <Layout>
       <Topbar heading={t('animes-list')} />
-      <input />
+      <SearchBox initialSearchValue='' onValueChange={(e) => {
+        console.log(e)
+      }} />
       <AnimeList />
     </Layout>
   )
