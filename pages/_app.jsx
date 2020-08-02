@@ -4,7 +4,6 @@ import App from 'next/app'
 
 import '../styles/main.scss'
 import { appWithTranslation } from '../i18n'
-import Layout from '../components/Layout'
 
 import { isServer } from '../utils/helpers'
 
@@ -16,7 +15,7 @@ if (!isServer) {
 }
 
 function MyApp ({ Component, pageProps }) {
-  return <Layout><Component {...pageProps} /></Layout>
+  return <Component {...pageProps} />
 }
 
 MyApp.getInitialProps = async (appContext) => ({ ...await App.getInitialProps(appContext) })

@@ -1,18 +1,18 @@
 import React from 'react'
-import styles from '../styles/modules/Home.module.scss'
 
 import { useTranslation } from '../i18n'
 import Topbar from '../components/Topbar'
 import AnimeList from '../components/AnimeList'
+import Layout from '../components/Layout'
 
 export default function IndexPage() {
   const { t } = useTranslation()
 
   return (
-    <main className={styles.main}>
+    <Layout>
       <Topbar heading={t('latest-animes')} />
       <AnimeList />
-    </main>
+    </Layout>
   )
 }
 

@@ -1,19 +1,19 @@
 import React from 'react'
 
-import styles from '../../styles/modules/Search.module.scss'
 import { useTranslation } from '../../i18n'
 import Topbar from '../../components/Topbar'
 import AnimeList from '../../components/AnimeList'
+import Layout from '../../components/Layout'
 
 export default function SearchPage() {
   const { t } = useTranslation()
 
   return (
-    <main className={styles.main}>
+    <Layout>
       <Topbar heading={t('animes-list')} />
       <input />
       <AnimeList />
-    </main>
+    </Layout>
   )
 }
 
