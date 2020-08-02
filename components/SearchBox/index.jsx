@@ -4,13 +4,16 @@ import { useRouter } from 'next/router'
 
 import styles from './SearchBox.module.scss'
 
-export default function SearchBox({ initialSearchValue = '', onValueChange }) {
+export default function SearchBox({ initialSearchValue = undefined, onValueChange }) {
   const router = useRouter()
   const [searchValue, setSearchValue] = useState(initialSearchValue)
 
   useEffect(() => {
     // to change the pathname value dynamically
-    router.push('/search/' + searchValue, undefined, { shallow: true })
+
+    if (!searchValue && initialSearchValue === undefined) return
+
+    router.push(`/search/[[...query]]?query=${searchValue}`, `/search/${searchValue}`, { shallow: true })
 
     onValueChange(searchValue)
   }, [searchValue])
@@ -23,6 +26,6 @@ export default function SearchBox({ initialSearchValue = '', onValueChange }) {
 }
 
 SearchBox.propTypes = {
-  initialSearchValue: propTypes.string.isRequired,
+  initialSearchValue: propTypes.string,
   onValueChange: propTypes.func.isRequired
 }
