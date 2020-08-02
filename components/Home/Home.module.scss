@@ -1,12 +1,13 @@
 .main {
   grid-area: main;
 
+  padding-top: var(--topbar-height-initial);
+
   background-color: var(--background-color);
   color: var(--text-color);
 
   overflow-y: auto;
 
-  .heading {
-    font-size: 3rem;
-  }
+  display: flex;
+  flex-direction: column;
 }
