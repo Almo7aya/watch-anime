@@ -11,11 +11,11 @@
   --background-color: rgb(16, 17, 17);
 
   --accent-color: #6da7a0;
-  --text-color: #bcbcbc;
+  --text-color: #fff2f2;
 
-  --brand-color-1: rgb(216, 57, 62);
+  --brand-color-1: rgb(216, 57, 62, .7);
   --brand-color-2: rgb(145, 144, 144);
-  --brand-color-3: rgb(99, 211, 198);
+  --brand-color-3: rgb(27, 161, 146, .7);
 
   // Sizes
   --navbar-width: 12rem;
@@ -24,7 +24,7 @@
   --topbar-height-initial: 8rem;
   --topbar-height-scrolled: 3rem;
 
-  --anime-list-height: 15rem;
+  --anime-list-height: 32rem;
   --anime-list-width: 20rem;
 
   --anime-list-gap: 2rem;

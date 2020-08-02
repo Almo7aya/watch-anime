@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from './AnimeList.module.scss'
-
+import AnimeListItem from '../AnimeListItem'
 import data from '../../utils/data.json'
 
 export default function AnimeList() {
@@ -11,13 +11,7 @@ export default function AnimeList() {
     <section className={styles.animelist}>
       {
         list.map((anime) => {
-          return (<div key={anime.anime_id}>
-            <p>{anime.anime_name}</p>
-            <p>{anime.anime_description}</p>
-            <p>{anime.anime_status}</p>
-            <p>{anime.anime_type}</p>
-            <p>{anime.anime_release_year}</p>
-          </div>)
+          return (<AnimeListItem animeData={anime} key={anime.anime_id} />)
         })
       }
     </section>

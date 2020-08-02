@@ -1,0 +1,82 @@
+.animelistitem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 1rem;
+  border: .2rem solid;
+  border-left-color: var(--brand-color-1);
+  border-top-color: var(--brand-color-1);
+  border-right-color: var(--brand-color-3);
+  border-bottom-color: var(--brand-color-3);
+
+  padding: .5rem;
+  z-index: 0;
+
+  .floating_details {
+    position: relative;
+
+    flex: 90;
+    overflow: hidden;
+    border-radius: .5rem;
+
+    &_img {
+      height: 100%;
+      width: 100%;
+    }
+
+    &_rating {
+      direction: ltr;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 1.4rem;
+      font-weight: bold;
+
+      border-bottom-right-radius: .5rem;
+
+      padding: .3rem .5rem .3rem 0;
+
+      background-color: var(--brand-color-1);
+
+      &::before {
+        content: "⭐ ";
+        display: inline-block;
+        font-size: 1.1rem;
+      }
+    }
+
+    &_last_episode_name {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 1.4rem;
+      font-weight: bold;
+
+      border-top-left-radius: .5rem;
+      padding: .3rem .5rem .3rem .5rem;
+      background-color: var(--brand-color-3);
+
+    }
+  }
+
+  .static_details {
+    flex: 10;
+
+    padding-top: .4rem;
+
+    &_title {
+      overflow: hidden;
+
+      font-size: 1.7rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &_bottom_row {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

@@ -24,13 +24,11 @@
       color: var(--brand-color-2);
 
       &:first-child {
-        opacity: .8;
         left: 55%;
         color: var(--brand-color-1);
         animation: brand-animation-right 6s infinite alternate linear;
       }
       &:last-child {
-        opacity: .5;
         left: 45%;
         color: var(--brand-color-3);
         animation: brand-animation-left 6s infinite alternate linear;
