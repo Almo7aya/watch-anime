@@ -9,8 +9,8 @@
   border-radius: 1rem;
   font-size: 1.2em;
 
-  isolation: isolate;
-
+  z-index: 2;
+  position: relative;
 
   @media (max-width: $main-layout-breakpoint-xxm) {
     display: block;

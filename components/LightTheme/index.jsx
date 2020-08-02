@@ -15,11 +15,23 @@ class LightTheme extends React.Component {
   }
 
   componentDidMount() {
-    if (!isServer) this.wrapper.appendChild(this.el)
+    if (!isServer) {
+      this.wrapper.appendChild(this.el)
+      requestAnimationFrame(() => {
+        document.querySelector(':root')
+          .style.setProperty('--forced-light-theme', '#efeeee')
+      })
+    }
   }
 
   componentWillUnmount() {
-    if (!isServer) this.wrapper.removeChild(this.el)
+    if (!isServer) {
+      this.wrapper.removeChild(this.el)
+      requestAnimationFrame(() => {
+        document.querySelector(':root')
+          .style.setProperty('--forced-light-theme', 'var(--primary-color)')
+      })
+    }
   }
 
   render() {

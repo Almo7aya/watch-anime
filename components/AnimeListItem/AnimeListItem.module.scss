@@ -15,7 +15,7 @@
   background-color: var(--primary-color);
 
   padding: .5rem;
-  z-index: 0;
+
 
   .floating_details {
     position: relative;
@@ -27,6 +27,9 @@
     &_img {
       height: 100%;
       width: 100%;
+      z-index: 2;
+
+      position: relative;
     }
 
     &_rating {
@@ -41,6 +44,8 @@
       padding: .3rem .5rem .3rem 0;
 
       background-color: var(--brand-color-1);
+
+      z-index: 3;
 
       &::before {
         content: "⭐ ";
@@ -60,6 +65,7 @@
       padding: .3rem .5rem .3rem .5rem;
       background-color: var(--brand-color-3);
 
+      z-index: 3;
     }
   }
 

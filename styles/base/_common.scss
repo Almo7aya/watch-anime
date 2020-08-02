@@ -8,3 +8,18 @@ nav a.active {
     border-bottom-color: var(--accent-color);
   }
 }
+
+
+#light-theme-holder {
+  z-index: 1;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: calc(100 * var(--vh));
+
+  mix-blend-mode: difference;
+  pointer-events: none;
+}

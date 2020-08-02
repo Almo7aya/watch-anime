@@ -18,15 +18,18 @@
 
   padding: var(--topbar-padding);
 
-  //background-color: var(--primary-color);
+  background-color: var(--forced-light-theme);
 
-  backdrop-filter: blur(1rem);
+  // backdrop-filter: blur(1rem);
 
-  z-index: 1;
+  transition: 20ms all;
+
+  z-index: 5;
 
   h2 {
     color: var(--text-color);
     line-height: var(--topbar-height-initial);
     flex: 1;
+    mix-blend-mode: difference;
   }
 }

@@ -3,21 +3,14 @@
   height: 100vh;
 
   position: fixed;
-  left: 0;
-  bottom: 0;
   background: #ffffff;
   mix-blend-mode: difference;
   pointer-events: none;
 
-  top: 45%;
-  left: -29%;
-
-  transform: scale(0);
+  transform: translate(-50%, 50%) scale(0);
   border-radius: 50% ;
 
   animation: overlay-light-in 1000ms forwards;
-
-  z-index: 1;
 }
 
 .lighttheme_full {
@@ -25,31 +18,24 @@
   height: 100vh;
 
   position: fixed;
-  left: 0;
-  bottom: 0;
   background: #ffffff;
   mix-blend-mode: difference;
   pointer-events: none;
 
-  top: 45%;
-  left: -29%;
-
-  transform: scale(5);
+  transform: translate(-50%, 50%) scale(5);
   border-radius: 50% ;
 
   animation: overlay-light-out 1000ms forwards;
-
-  z-index: 1;
 }
 
 @keyframes overlay-light-in {
   to {
-    transform: scale(5);
+    transform: translate(-50%, 50%) scale(5);
   }
 }
 
 @keyframes overlay-light-out {
   to {
-    transform: scale(0);
+    transform: translate(-50%, 50%) scale(0);
   }
 }
