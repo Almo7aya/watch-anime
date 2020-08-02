@@ -10,7 +10,7 @@ export default function SearchBox({ initialSearchValue = '', onValueChange }) {
 
   useEffect(() => {
     // to change the pathname value dynamically
-    router.push('/search/' + searchValue, null, { shallow: true })
+    router.push('/search/' + searchValue, undefined, { shallow: true })
 
     onValueChange(searchValue)
   }, [searchValue])
