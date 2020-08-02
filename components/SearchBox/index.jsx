@@ -12,7 +12,10 @@ export default function SearchBox({ initialSearchValue = '', onValueChange }) {
     // to change the pathname value dynamically
     router.push(`/search/[[...query]]?query=${searchValue}`, `/search/${searchValue}`, { shallow: true })
 
-    onValueChange(searchValue)
+    // a workaround to disable the effect in the first render
+    return () => {
+      onValueChange(searchValue)
+    }
   }, [searchValue])
 
   return (

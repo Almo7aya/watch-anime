@@ -7,9 +7,10 @@ import AnimeList from '../../components/AnimeList'
 import Layout from '../../components/Layout'
 import SearchBox from '../../components/SearchBox'
 
-export default function QueryPage({ query }) {
+export default function SearchPage({ params }) {
   const { t } = useTranslation()
-  const { [query]: searchQuery } = query
+
+  const searchQuery = Object.keys(params).length ? params.query[0] : ''
 
   return (
     <Layout>
@@ -22,11 +23,11 @@ export default function QueryPage({ query }) {
   )
 }
 
-QueryPage.getInitialProps = async ({ query }) => ({
+SearchPage.getInitialProps = async ({ query }) => ({
   namespacesRequired: ['common'],
-  query: query
+  params: query
 })
 
-QueryPage.propTypes = {
-  query: propTypes.object.isRequired
+SearchPage.propTypes = {
+  params: propTypes.object.isRequired
 }
