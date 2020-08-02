@@ -19,7 +19,7 @@
     flex-direction: column;
     align-items: center;
 
-    @media (max-width: $main-layout-breakpoint) {
+    @media (max-width: $main-layout-breakpoint-xxm) {
       flex-direction: row;
     }
 
@@ -30,7 +30,7 @@
       width: 100%;
       color: var(--text-color);
 
-      @media (max-width: $main-layout-breakpoint) {
+      @media (max-width: $main-layout-breakpoint-xxm) {
         margin: 0;
       }
 
@@ -41,7 +41,7 @@
         border-right: .4rem solid transparent;
         transition: 400ms all;
 
-        @media (max-width: $main-layout-breakpoint) {
+        @media (max-width: $main-layout-breakpoint-xxm) {
           border: none;
           border-top: .4rem solid transparent;
           border-bottom: .4rem solid transparent;
@@ -50,7 +50,7 @@
         i {
           font-size: 3em;
 
-          @media (max-width: $main-layout-breakpoint) {
+          @media (max-width: $main-layout-breakpoint-xxm) {
             font-size: 2.5em;
           }
         }

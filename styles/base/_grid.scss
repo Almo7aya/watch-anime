@@ -8,7 +8,7 @@
     "header main"
     "navbar main";
 
-  @media screen and (max-width: $main-layout-breakpoint) {
+  @media screen and (max-width: $main-layout-breakpoint-xxm) {
     grid-template-columns: 1fr;
 
     grid-template-rows: var(--header-mobile-height) 1fr var(--navbar-mobile-height);

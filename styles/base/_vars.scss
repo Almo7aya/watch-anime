@@ -26,7 +26,7 @@
   --topbar-padding: 0 4rem;
   --topbar-height-initial: 8rem;
   --topbar-height-scrolled: 3rem;
-  @media (max-width: $main-layout-breakpoint) {
+  @media (max-width: $main-layout-breakpoint-xxm) {
     --topbar-padding: 0 4rem;
     --topbar-height-initial: 4rem;
     --topbar-height-scrolled: 4rem;
@@ -36,21 +36,33 @@
   --anime-list-width: 20rem;
   --anime-list-gap: 2rem;
 
-  @media (max-width: $main-layout-breakpoint) {
+  @media (max-width: $main-layout-breakpoint-xxm) {
     --anime-list-height: 23rem;
     --anime-list-width: 13rem;
     --anime-list-gap: 1rem;
   }
 
-  @media (max-width: 560px) {
+  @media (max-width: $main-layout-breakpoint-m) {
+    --anime-list-height: 26rem;
+    --anime-list-width: 15rem;
+    --anime-list-gap: 1rem;
+  }
+
+  @media (max-width: $main-layout-breakpoint-s) {
     --anime-list-height: 22rem;
     --anime-list-width: 14rem;
     --anime-list-gap: 1rem;
   }
 
-  @media (max-width: 445px) {
+  @media (max-width: $main-layout-breakpoint-xs) {
     --anime-list-height: 20rem;
     --anime-list-width: 12rem;
+    --anime-list-gap: 1rem;
+  }
+
+  @media (max-width: $main-layout-breakpoint-xxs) {
+    --anime-list-height: 18rem;
+    --anime-list-width: 10rem;
     --anime-list-gap: 1rem;
   }
 

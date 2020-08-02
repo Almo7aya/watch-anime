@@ -11,7 +11,7 @@
 
   top: 0%;
 
-  @media (max-width: $main-layout-breakpoint) {
+  @media (max-width: $main-layout-breakpoint-xxm) {
     top: var(--header-mobile-height);
   }
 
