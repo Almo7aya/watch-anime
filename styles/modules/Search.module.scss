@@ -1,0 +1,13 @@
+.main {
+  grid-area: main;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  padding-top: var(--topbar-height-initial);
+  padding-bottom: var(--topbar-height-initial);
+
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}

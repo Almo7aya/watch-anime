@@ -1,10 +1,22 @@
 import React from 'react'
-export default function Search () {
-  return (<p>
-    Search
-  </p>)
+
+import styles from '../../styles/modules/Search.module.scss'
+import { useTranslation } from '../../i18n'
+import Topbar from '../../components/Topbar'
+import AnimeList from '../../components/AnimeList'
+
+export default function SearchPage() {
+  const { t } = useTranslation()
+
+  return (
+    <main className={styles.main}>
+      <Topbar heading={t('animes-list')} />
+      <input />
+      <AnimeList />
+    </main>
+  )
 }
 
-Search.getInitialProps = async () => ({
+SearchPage.getInitialProps = async () => ({
   namespacesRequired: ['common']
 })

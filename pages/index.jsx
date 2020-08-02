@@ -1,11 +1,21 @@
 import React from 'react'
+import styles from '../styles/modules/Home.module.scss'
 
-import Home from '../components/Home'
+import { useTranslation } from '../i18n'
+import Topbar from '../components/Topbar'
+import AnimeList from '../components/AnimeList'
 
-export default function Index () {
-  return <Home />
+export default function IndexPage() {
+  const { t } = useTranslation()
+
+  return (
+    <main className={styles.main}>
+      <Topbar heading={t('latest-animes')} />
+      <AnimeList />
+    </main>
+  )
 }
 
-Index.getInitialProps = async () => ({
+IndexPage.getInitialProps = async () => ({
   namespacesRequired: ['common']
 })

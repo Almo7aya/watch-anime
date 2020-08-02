@@ -1,11 +1,22 @@
 import React from 'react'
 
-export default function Query () {
-  return (<p>
-    Query
-  </p>)
+import styles from '../../styles/modules/Search.module.scss'
+import { useTranslation } from '../../i18n'
+import Topbar from '../../components/Topbar'
+import AnimeList from '../../components/AnimeList'
+
+export default function QueryPage() {
+  const { t } = useTranslation()
+
+  return (
+    <main className={styles.main}>
+      <Topbar heading={t('animes-list')} />
+      <input />
+      <AnimeList />
+    </main>
+  )
 }
 
-Query.getInitialProps = async () => ({
+QueryPage.getInitialProps = async () => ({
   namespacesRequired: ['common']
 })

@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function About () {
+export default function AboutPage () {
   return (<p>
     About~
   </p>)
 }
 
-About.getInitialProps = async () => ({
+AboutPage.getInitialProps = async () => ({
   namespacesRequired: ['common']
 })
