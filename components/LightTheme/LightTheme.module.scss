@@ -1,6 +1,6 @@
 .lighttheme_mini {
-  width: 100vh;
-  height: 100vh;
+  width: 140vh;
+  height: 140vh;
 
   position: fixed;
   background: #ffffff;
@@ -14,8 +14,8 @@
 }
 
 .lighttheme_full {
-  width: 100vh;
-  height: 100vh;
+  width: 140vh;
+  height: 140vh;
 
   position: fixed;
   background: #ffffff;
@@ -30,7 +30,7 @@
 
 @keyframes overlay-light-in {
   to {
-    transform: translate(-50%, 50%) scale(5);
+    transform: translate(-50%, 50%) scale(3);
   }
 }
 
