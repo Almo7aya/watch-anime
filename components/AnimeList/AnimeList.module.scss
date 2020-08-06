@@ -7,4 +7,8 @@
   grid-template-columns: repeat(auto-fill, var(--anime-list-width));
   grid-auto-rows: var(--anime-list-height);
   justify-content: space-evenly;
+
+  overflow-y: auto;
+
+  padding-bottom: 2rem;
 }

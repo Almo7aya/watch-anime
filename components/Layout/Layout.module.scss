@@ -5,9 +5,8 @@
   color: var(--text-color);
 
   padding-top: var(--topbar-height-initial);
-  padding-bottom: var(--topbar-height-initial);
 
-  overflow-y: auto;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
