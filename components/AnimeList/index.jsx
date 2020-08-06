@@ -1,19 +1,21 @@
 import React from 'react'
+import propTypes from 'prop-types'
 
 import styles from './AnimeList.module.scss'
 import AnimeListItem from '../AnimeListItem'
-import data from '../../utils/data.json'
 
-export default function AnimeList() {
-  const list = data.response.data
-
+export default function AnimeList({ animesData }) {
   return (
     <section className={styles.animelist}>
       {
-        list.map((anime) => {
+        animesData.map((anime) => {
           return (<AnimeListItem animeData={anime} key={anime.anime_id} />)
         })
       }
     </section>
   )
+}
+
+AnimeList.propTypes = {
+  animesData: propTypes.array.isRequired
 }
