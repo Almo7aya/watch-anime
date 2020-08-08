@@ -5,18 +5,21 @@ import { useTranslation } from '../i18n'
 import Topbar from '../components/Topbar'
 import AnimeList from '../components/AnimeList'
 import httpClient from '../utils/http-client'
+import config from '../config.json'
+
+const ENDPOINT = 'list'
 
 export default function ListPage({ data, status }) {
   const { t } = useTranslation()
 
   if (!data || status < 200) return <h1>SERVER IS OUT!</h1>
 
-  const { response: { data: animesData } } = data
+  const { response } = data
 
   return (
     <>
       <Topbar heading={t('animes-list')} />
-      <AnimeList animesData={animesData} />
+      <AnimeList initailAnimeData={response.data} endpoint={ENDPOINT} />
     </>
   )
 }
@@ -24,7 +27,11 @@ export default function ListPage({ data, status }) {
 ListPage.getInitialProps = async () => {
   let res
   try {
-    res = await httpClient.get('list')
+    res = await httpClient.get(ENDPOINT, {
+      params: {
+        _limit: config.initialPageLimit
+      }
+    })
   } catch (e) {
     res = {
       data: null,
