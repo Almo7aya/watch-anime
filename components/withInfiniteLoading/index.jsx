@@ -10,6 +10,7 @@ export default function withInfiniteLoading(WrappedComponent) {
     const [animesData, setAnimesData] = useState(initailAnimeData)
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState(null)
+    const [hasMoreData, setHasMoreData] = useState(true)
 
     useEffect(() => {
       if (animesData.length === offset || disableInfinite) return // dont getData if the size is equal
@@ -23,6 +24,7 @@ export default function withInfiniteLoading(WrappedComponent) {
       }).then(({ data }) => {
         setIsLoading(false)
         const newData = data.response.data
+        if (newData.length < config.lazyLoadLimit) setHasMoreData(false)
         setAnimesData([...animesData, ...newData])
       }).catch((e) => {
         setError(e)
@@ -31,7 +33,7 @@ export default function withInfiniteLoading(WrappedComponent) {
     }, [offset])
 
     return (<>
-      <WrappedComponent animesData={animesData} isLoading={isLoading} loadMore={() => setOffset(offset + config.lazyLoadLimit)} error={error} />
+      <WrappedComponent animesData={animesData} isLoading={isLoading} loadMore={() => setOffset(offset + config.lazyLoadLimit)} error={error} hasMoreData={hasMoreData} />
     </>)
   }
 

@@ -6,10 +6,10 @@ import styles from './AnimeList.module.scss'
 import AnimeListItem from '../AnimeListItem'
 import withInfiniteLoading from '../withInfiniteLoading'
 
-const AnimeList = ({ animesData, isLoading, loadMore }) => {
+const AnimeList = ({ animesData, isLoading, loadMore, hasMoreData = true }) => {
   const infiniteRef = useInfiniteScroll({
     onLoadMore: loadMore,
-    hasNextPage: true,
+    hasNextPage: hasMoreData,
     loading: isLoading
   })
 
@@ -32,6 +32,7 @@ const AnimeList = ({ animesData, isLoading, loadMore }) => {
 AnimeList.propTypes = {
   animesData: propTypes.array.isRequired,
   isLoading: propTypes.bool.isRequired,
+  hasMoreData: propTypes.bool,
   loadMore: propTypes.func.isRequired
 }
 
