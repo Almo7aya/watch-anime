@@ -4,7 +4,7 @@ import propTypes from 'prop-types'
 import styles from './AnimeListItem.module.scss'
 import { useTranslation } from '../../i18n'
 
-export default function AnimeListItem({ animeData, showLastEpisode = true }) {
+export default function AnimeListItem({ animeData }) {
   const { t } = useTranslation()
 
   return (
@@ -14,7 +14,7 @@ export default function AnimeListItem({ animeData, showLastEpisode = true }) {
         <img className={styles.floating_details_img} src={animeData.anime_cover_image_url} />
         <p className={styles.floating_details_rating}>{animeData.anime_rating}</p>
         {
-          showLastEpisode && <p className={styles.floating_details_last_episode_name}>{animeData.latest_episode_name}</p>
+          animeData.latest_episode_name && <p className={styles.floating_details_last_episode_name}>{animeData.latest_episode_name}</p>
         }
       </div>
 
@@ -30,6 +30,5 @@ export default function AnimeListItem({ animeData, showLastEpisode = true }) {
 }
 
 AnimeListItem.propTypes = {
-  animeData: propTypes.object.isRequired,
-  showLastEpisode: propTypes.bool
+  animeData: propTypes.object.isRequired
 }
