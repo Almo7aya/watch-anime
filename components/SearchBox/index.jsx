@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import propTypes from 'prop-types'
 import { useRouter } from 'next/router'
+import { useDebounce } from 'use-debounce'
 
 import styles from './SearchBox.module.scss'
 import { useTranslation } from '../../i18n'
@@ -9,15 +10,15 @@ export default function SearchBox({ initialSearchValue = '', onValueChange }) {
   const router = useRouter()
   const [searchValue, setSearchValue] = useState(initialSearchValue)
   const { t } = useTranslation()
+
+  const [debouncedSearchValue] = useDebounce(searchValue, 500)
+
   useEffect(() => {
     // to change the pathname value dynamically
-    router.push(`/search/[[...query]]?query=${searchValue}`, `/search/${searchValue}`, { shallow: true })
+    router.push(`/search/[[...query]]?query=${debouncedSearchValue}`, `/search/${debouncedSearchValue}`, { shallow: false })
 
-    // a workaround to disable the effect in the first render
-    return () => {
-      onValueChange(searchValue)
-    }
-  }, [searchValue])
+    onValueChange(debouncedSearchValue)
+  }, [debouncedSearchValue])
 
   return (
     <input className={styles.searchbox} onChange={(e) => {
