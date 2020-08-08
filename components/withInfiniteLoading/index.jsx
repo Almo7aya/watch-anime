@@ -7,7 +7,7 @@ import config from '../../config.json'
 export default function withInfiniteLoading(WrappedComponent) {
   const infiniteLoading = ({ initailAnimeData, endpoint = '', disableInfinite = false }) => {
     const [offset, setOffset] = useState(config.initialPageLimit)
-    const [animesData, setAnimesData] = useState(initailAnimeData)
+    const [animesData, setAnimesData] = useState(initailAnimeData || [])
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState(null)
     const [hasMoreData, setHasMoreData] = useState(true)

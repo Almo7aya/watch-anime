@@ -23,7 +23,7 @@ const AnimeList = ({ animesData, isLoading, loadMore, hasMoreData = true }) => {
         }
       </section>
       {
-        isLoading ? <p>Loading...</p> : <button onClick={loadMore}>Loadmore</button>
+        hasMoreData ? isLoading ? <p>Loading...</p> : <button onClick={loadMore}>Loadmore</button> : null
       }
     </>
   )
