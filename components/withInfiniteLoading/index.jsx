@@ -23,8 +23,13 @@ export default function withInfiniteLoading(WrappedComponent) {
         }
       }).then(({ data }) => {
         setIsLoading(false)
+
+        if (data.response.length === 0) setHasMoreData(false)
+
         const newData = data.response.data
+
         if (newData.length < config.lazyLoadLimit) setHasMoreData(false)
+
         setAnimesData([...animesData, ...newData])
       }).catch((e) => {
         setError(e)
