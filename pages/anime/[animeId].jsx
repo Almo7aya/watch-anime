@@ -17,7 +17,7 @@ export default function AnimePage({ animeId, data, status }) {
 
   return (
     <>
-      <Topbar heading={t('anime')} />
+      <Topbar heading={response.anime_name} />
       <AnimeDetails data={response} />
     </>
   )

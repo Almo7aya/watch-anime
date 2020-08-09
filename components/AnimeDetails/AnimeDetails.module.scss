@@ -1,0 +1,69 @@
+@import '../../styles//base/breakpoints';
+
+.animedetails {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+  &_detailsholder {
+    padding: 1rem;
+
+    display: flex;
+
+    @media (max-width: $main-layout-breakpoint-xm) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &_image {
+      align-self: center;
+
+      border-radius: 1rem;
+      border: .2rem solid;
+      border-left-color: var(--brand-color-1);
+      border-top-color: var(--brand-color-1);
+      border-right-color: var(--brand-color-3);
+      border-bottom-color: var(--brand-color-3);
+
+      background-color: var(--primary-color);
+      padding: .5rem;
+
+      width: 18%;
+
+      @media (max-width: $main-layout-breakpoint-xm) {
+        width: 48%
+      }
+
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &_details {
+      flex: 1;
+
+      margin: 0 1rem;
+    }
+  }
+
+  &_episodesholder {
+    display: flex;
+
+    flex-direction: column;
+
+    @media (max-width: $main-layout-breakpoint-xm) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    padding: 1rem;
+
+    h2 {
+      @media (max-width: $main-layout-breakpoint-xm) {
+        text-align: center;
+      }
+    }
+  }
+}
