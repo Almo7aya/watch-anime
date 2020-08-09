@@ -4,6 +4,7 @@ import useInfiniteScroll from '../../hooks/useInfiniteScroll'
 
 import styles from './AnimeList.module.scss'
 import AnimeListItem from '../AnimeListItem'
+import Loading from '../Loading'
 import withInfiniteLoading from '../withInfiniteLoading'
 
 const AnimeList = ({ animesData, isLoading, loadMore, hasMoreData = true }) => {
@@ -23,7 +24,7 @@ const AnimeList = ({ animesData, isLoading, loadMore, hasMoreData = true }) => {
         }
       </section>
       {
-        hasMoreData ? isLoading ? <p>Loading...</p> : <button onClick={loadMore}>Loadmore</button> : null
+        isLoading && <Loading />
       }
     </>
   )

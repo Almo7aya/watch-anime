@@ -1,0 +1,41 @@
+.loading {
+  display: flex;
+  justify-content: center;
+
+  height: 3rem;
+  margin: 1rem;
+
+  span {
+    opacity: .7;
+    width: 2.7rem;
+    height: 2.7rem;
+
+    margin: 0 -2rem;
+
+    border-radius: 50%;
+
+    background-color: var(--brand-color-2);
+
+    &:first-child {
+      background-color: var(--brand-color-1);
+      animation: brand-animation-right 500ms infinite alternate linear;
+    }
+
+    &:last-child {
+      background-color: var(--brand-color-3);
+      animation: brand-animation-left 500ms infinite alternate linear;
+    }
+  }
+}
+
+@keyframes brand-animation-left {
+  to {
+    margin: 0;
+  }
+}
+
+@keyframes brand-animation-right {
+  to {
+    margin: 0;
+  }
+}
