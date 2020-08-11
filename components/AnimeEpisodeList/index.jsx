@@ -32,7 +32,7 @@ export default function AnimeEpisodeList({ animeId }) {
       {hasError && <p>Error while loading</p>}
       {isLoading && <Loading />}
       {!hasError && !isLoading && episodesList.map(ep => (
-        <Link href='/' key={ep.episode_id}>
+        <Link href='/search' key={ep.episode_id}>
           <a>
             <p>{ep.episode_name}</p>
           </a>
