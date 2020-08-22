@@ -1,23 +1,18 @@
 import React from 'react'
 import propTypes from 'prop-types'
 
-import { useTranslation } from '../../i18n'
-import Topbar from '../../components/Topbar'
 import AnimeDetails from '../../components/AnimeDetails'
 import httpClient from '../../utils/http-client'
 
 const ENDPOINT = 'anime-details'
 
 export default function AnimePage({ animeId, data, status }) {
-  const { t } = useTranslation()
-
   if (!data || status < 200) return <h1>SERVER IS OUT!</h1>
 
   const { response } = data
 
   return (
     <>
-      <Topbar heading={response.anime_name} />
       <AnimeDetails data={response} />
     </>
   )

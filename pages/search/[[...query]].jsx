@@ -1,8 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
 
-import { useTranslation } from '../../i18n'
-import Topbar from '../../components/Topbar'
 import AnimeList from '../../components/AnimeList'
 import SearchBox from '../../components/SearchBox'
 import httpClient from '../../utils/http-client'
@@ -29,15 +27,12 @@ const getSearchData = async (query) => {
 }
 
 export default function SearchPage({ query, data, status }) {
-  const { t } = useTranslation()
-
   if (!data || status < 200) return <h1>SERVER IS OUT!</h1>
 
   const { response } = data
 
   return (
     <>
-      <Topbar heading={t('search')} />
       <SearchBox initialSearchValue={query} onValueChange={(newQuery) => {}} />
       <AnimeList key={query} initailAnimeData={response.data} endpoint={ENDPOINT + `?query=${query}`} />
     </>

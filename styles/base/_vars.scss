@@ -24,15 +24,6 @@
   --navbar-mobile-height: 5rem;
   --header-mobile-height: 5rem;
 
-  --topbar-padding: 0 4rem;
-  --topbar-height-initial: 8rem;
-  --topbar-height-scrolled: 3rem;
-  @media (max-width: $main-layout-breakpoint-xxm) {
-    --topbar-padding: 0 1rem;
-    --topbar-height-initial: 4rem;
-    --topbar-height-scrolled: 4rem;
-  }
-
   --anime-list-height: 32rem;
   --anime-list-width: 20rem;
   --anime-list-gap: 2rem;
