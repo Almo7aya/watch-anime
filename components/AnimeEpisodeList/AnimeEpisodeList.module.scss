@@ -1,3 +1,13 @@
 .animeepisodelist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 
+  padding-top: 1rem;
+
+  a {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    text-align: center;
+  }
 }

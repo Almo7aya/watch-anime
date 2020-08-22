@@ -20,11 +20,11 @@ export default function AnimeDetails({ data }) {
             <p>Year: {data.anime_release_year}</p>
             <p>Season: {data.anime_season}</p>
           </div>
-          <p>Description: {data.anime_description}</p>
         </div>
       </div>
 
       <div className={styles.animedetails_episodesholder}>
+        <p>Description: {data.anime_description}</p>
         <h2>Episodes</h2>
         <AnimeEpisodeList animeId={data.anime_id} />
       </div>

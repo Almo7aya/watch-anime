@@ -2,22 +2,21 @@
 
 .animedetails {
   display: flex;
-  flex-direction: column;
   overflow: auto;
+
+  @media (max-width: $main-layout-breakpoint-xm) {
+    flex-direction: column;
+  }
 
   &_detailsholder {
     padding: 1rem;
 
-    display: flex;
+    flex: 1.5;
 
-    @media (max-width: $main-layout-breakpoint-xm) {
-      flex-direction: column;
-      justify-content: center;
-    }
+    display: flex;
+    flex-direction: column;
 
     &_image {
-      align-self: center;
-
       border-radius: 1rem;
       border: .2rem solid;
       border-left-color: var(--brand-color-1);
@@ -28,39 +27,44 @@
       background-color: var(--primary-color);
       padding: .5rem;
 
-      width: 18%;
+      width: max-content;
 
       @media (max-width: $main-layout-breakpoint-xm) {
-        width: 48%
+        align-self: center;
       }
 
-
       img {
-        width: 100%;
         height: 100%;
+        width: 100%;
       }
     }
 
     &_details {
       flex: 1;
+      margin-top: 1rem;
 
-      margin: 0 1rem;
+      @media (max-width: $main-layout-breakpoint-xm) {
+        justify-content: center;
+        text-align: center;
+      }
     }
   }
 
   &_episodesholder {
     display: flex;
 
+    flex: 8.5;
     flex-direction: column;
 
     @media (max-width: $main-layout-breakpoint-xm) {
-      flex-direction: column;
       justify-content: center;
+      text-align: center;
     }
 
     padding: 1rem;
 
     h2 {
+      margin-top: 1rem;
       @media (max-width: $main-layout-breakpoint-xm) {
         text-align: center;
       }

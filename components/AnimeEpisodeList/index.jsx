@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import propTypes from 'prop-types'
 import Link from 'next/link'
 
+import styles from './AnimeEpisodeList.module.scss'
 import Loading from '../Loading'
 import httpClinet from '../../utils/http-client'
 
@@ -31,14 +32,16 @@ export default function AnimeEpisodeList({ animeId }) {
     <>
       {hasError && <p>Error while loading</p>}
       {isLoading && <Loading />}
-      {!hasError && !isLoading && episodesList.map(ep => (
-        <Link href='/search' key={ep.episode_id}>
-          <a>
-            <p>{ep.episode_name}</p>
-          </a>
-        </Link>
-      )
-      )}
+      <div className={styles.animeepisodelist}>
+        {!hasError && !isLoading && episodesList.map(ep => (
+          <Link href='/search' key={ep.episode_id}>
+            <a>
+              {ep.episode_name}
+            </a>
+          </Link>
+        )
+        )}
+      </div>
     </>
   )
 }
