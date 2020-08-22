@@ -1,0 +1,13 @@
+.episodedetailsurl {
+  display: flex;
+  flex-direction: column;
+
+  & iframe {
+    border: none;
+
+    margin: 2rem;
+    height: 40rem;
+
+    z-index: 5;
+  }
+}

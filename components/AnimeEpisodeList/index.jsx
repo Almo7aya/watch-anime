@@ -34,7 +34,7 @@ export default function AnimeEpisodeList({ animeId }) {
       {isLoading && <Loading />}
       <div className={styles.animeepisodelist}>
         {!hasError && !isLoading && episodesList.map(ep => (
-          <Link href='/search' key={ep.episode_id}>
+          <Link href='/anime/[animeId]/[episodeId]' as={`/anime/${animeId}/${ep.episode_id}`} key={ep.episode_id}>
             <a>
               {ep.episode_name}
             </a>
