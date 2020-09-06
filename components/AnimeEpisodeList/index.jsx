@@ -19,7 +19,7 @@ export default function AnimeEpisodeList({ animeId }) {
       }
     })
       .then(({ data }) => {
-        setEpisodesList(data.response.data)
+        setEpisodesList(data.response.data.reverse())
         setIsLoading(false)
       })
       .catch((e) => {
