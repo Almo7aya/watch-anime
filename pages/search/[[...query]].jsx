@@ -1,6 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import AnimeList from '../../components/AnimeList'
 import SearchBox from '../../components/SearchBox'

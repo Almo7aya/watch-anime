@@ -12,7 +12,7 @@ export default function EpisodeDetailsURL({ episodeURL }) {
   useEffect(() => {
     // TODO: solve the CDN encryption
     const cdnServer = episodeURL.find(server => server.episode_server_name === 'cdn')
-    console.log(cdnServer);
+    console.log(cdnServer)
 
     httpClinet.get('/stream-link', {
       params: {
@@ -31,8 +31,8 @@ export default function EpisodeDetailsURL({ episodeURL }) {
 
   return (
     <>
-      {loading ? <Loading /> :
-        <div className={styles.episodedetailsurl}>
+      {loading ? <Loading />
+        : <div className={styles.episodedetailsurl}>
           <video autoPlay controls src={urls[0]} />
         </div>
       }

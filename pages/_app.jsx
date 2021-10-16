@@ -1,6 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import { appWithTranslation } from 'next-i18next';
+import { appWithTranslation } from 'next-i18next'
 
 import '../styles/main.scss'
 import Layout from '../components/Layout'

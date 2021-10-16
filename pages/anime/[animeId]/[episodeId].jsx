@@ -1,6 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import httpClient from '../../../utils/http-client'
 import EpisodeDetails from '../../../components/EpisodeDetails'
@@ -18,7 +18,6 @@ export default function EpisodePage({ animeId, data, status }) {
     </>
   )
 }
-
 
 export const getServerSideProps = async ({ query, locale }) => {
   const { animeId, episodeId } = query
