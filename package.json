@@ -6,7 +6,11 @@
     "dev": "next dev",
     "dev:debug": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "pm2:start": "pm2 start yarn --name \"watch-anime\" --interpreter bash -- start",
+    "pm2:stop": "pm2 stop watch-anime",
+    "pm2:monit": "pm2 monit watch-anime",
+    "pm2:list": "pm2 list"
   },
   "dependencies": {
     "@material/react-material-icon": "^0.15.0",
