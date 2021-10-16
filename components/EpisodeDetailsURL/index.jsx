@@ -11,10 +11,12 @@ export default function EpisodeDetailsURL({ episodeURL }) {
 
   useEffect(() => {
     // TODO: solve the CDN encryption
-    const muiltServer = episodeURL.find(server => server.episode_server_name === 'muilt')
-    httpClinet.get('/watch-link', {
+    const cdnServer = episodeURL.find(server => server.episode_server_name === 'cdn')
+    console.log(cdnServer);
+
+    httpClinet.get('/stream-link', {
       params: {
-        link: muiltServer.episode_url
+        link: cdnServer.episode_url
       }
     }).then(({ data }) => {
       setUrls(data)
@@ -29,10 +31,11 @@ export default function EpisodeDetailsURL({ episodeURL }) {
 
   return (
     <>
-      {loading && <Loading />}
-      <div className={styles.episodedetailsurl}>
-        {!loading && urls.map(url => (<iframe key={url} src={url} />))}
-      </div>
+      {loading ? <Loading /> :
+        <div className={styles.episodedetailsurl}>
+          <video autoPlay controls src={urls[0]} />
+        </div>
+      }
     </>
   )
 }

@@ -1,6 +1,6 @@
 {
   "initialPageLimit": 20,
   "lazyLoadLimit": 10,
-  "apiEndpoint": "https://watch-anime-api.netlify.app/.netlify/functions/server/v1/",
+  "apiEndpoint": "https://almo7aya.dev/watch/v1/",
   "X-CLIENT-TYPE": "Watch Anime Web"
 }

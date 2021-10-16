@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from './LanguageToggler.module.scss'
-import { useTranslation } from '../../i18n'
+import { useTranslation } from 'next-i18next'
 
 export default function LanguageToggler() {
   const { i18n } = useTranslation()

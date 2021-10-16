@@ -3,7 +3,7 @@ import propTypes from 'prop-types'
 import Link from 'next/link'
 
 import styles from './AnimeListItem.module.scss'
-import { useTranslation } from '../../i18n'
+import { useTranslation } from 'next-i18next'
 
 export default function AnimeListItem({ animeData }) {
   const { t } = useTranslation()

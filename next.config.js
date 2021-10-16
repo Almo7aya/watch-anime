@@ -1,7 +1,7 @@
-const { nextI18NextRewrites } = require('next-i18next/rewrites')
 const withSass = require('@zeit/next-sass')
+const { i18n } = require('./next-i18next.config.js')
 
 module.exports = {
-  rewrites: async () => nextI18NextRewrites(),
-  withSass: withSass()
+  withSass: withSass(),
+  i18n
 }

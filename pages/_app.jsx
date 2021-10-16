@@ -1,9 +1,8 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import App from 'next/app'
+import { appWithTranslation } from 'next-i18next';
 
 import '../styles/main.scss'
-import { appWithTranslation } from '../i18n'
 import Layout from '../components/Layout'
 import { isServer } from '../utils/helpers'
 
@@ -23,8 +22,6 @@ function MyApp({ Component, pageProps }) {
     </Layout>
   )
 }
-
-MyApp.getInitialProps = async (appContext) => ({ ...await App.getInitialProps(appContext) })
 
 MyApp.propTypes = {
   Component: propTypes.func.isRequired,

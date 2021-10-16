@@ -2,7 +2,7 @@ import React from 'react'
 import MaterialIcon from '@material/react-material-icon'
 
 import styles from './Navbar.module.scss'
-import { useTranslation } from '../../i18n'
+import { useTranslation } from 'next-i18next'
 import ActiveLink from '../ActiveLink'
 import Navtools from '../Navtools'
 

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 import styles from './Header.module.scss'
-import { useTranslation } from '../../i18n'
+import { useTranslation } from 'next-i18next'
 import LanguageToggler from '../LanguageToggler'
 import ThemeToggler from '../ThemeToggler'
 

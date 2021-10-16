@@ -1,5 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import AnimeList from '../components/AnimeList'
 import httpClient from '../utils/http-client'
@@ -19,7 +20,7 @@ export default function ListPage({ data, status }) {
   )
 }
 
-ListPage.getInitialProps = async () => {
+export const getServerSideProps = async (ctx) => {
   let res
   try {
     res = await httpClient.get(ENDPOINT, {
@@ -35,9 +36,11 @@ ListPage.getInitialProps = async () => {
   }
 
   return {
-    namespacesRequired: ['common'],
-    data: res.data,
-    status: res.status
+    props: {
+      ...(await serverSideTranslations(ctx.locale, ['common'])),
+      data: res.data,
+      status: res.status
+    }
   }
 }
 

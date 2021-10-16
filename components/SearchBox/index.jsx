@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { useDebounce } from 'use-debounce'
 
 import styles from './SearchBox.module.scss'
-import { useTranslation } from '../../i18n'
+import { useTranslation } from 'next-i18next'
 
 export default function SearchBox({ initialSearchValue = '', onValueChange }) {
   const router = useRouter()

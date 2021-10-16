@@ -1,5 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import AnimeList from '../../components/AnimeList'
 import SearchBox from '../../components/SearchBox'
@@ -33,22 +34,24 @@ export default function SearchPage({ query, data, status }) {
 
   return (
     <>
-      <SearchBox initialSearchValue={query} onValueChange={(newQuery) => {}} />
+      <SearchBox initialSearchValue={query} onValueChange={() => { }} />
       <AnimeList key={query} initailAnimeData={response.data} endpoint={ENDPOINT + `?query=${query}`} />
     </>
   )
 }
 
-SearchPage.getInitialProps = async ({ query }) => {
+export const getServerSideProps = async ({ query, locale }) => {
   const searchQuery = Object.keys(query).length ? query.query[0] : ''
 
   const res = await getSearchData(searchQuery)
 
   return {
-    namespacesRequired: ['common'],
-    data: res.data,
-    status: res.status,
-    query: searchQuery
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+      data: res.data,
+      status: res.status,
+      query: searchQuery || ''
+    }
   }
 }
 
