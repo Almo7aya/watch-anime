@@ -33,7 +33,7 @@ export default function EpisodeDetailsURL({ episodeURL }) {
     <>
       {loading ? <Loading />
         : <div className={styles.episodedetailsurl}>
-          <video autoPlay controls src={urls[0]} />
+          <video autoPlay controls src={urls[2] || urls[1] || urls[0]} />
         </div>
       }
     </>
